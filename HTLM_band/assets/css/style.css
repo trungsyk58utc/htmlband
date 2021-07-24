@@ -1,0 +1,350 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.text-white {
+    color: #fff !important;
+}
+.clear {
+    clear: both;
+}
+/* 1. Vi tri
+2. Kích thước
+3. Màu sắc
+4. Kiểu dáng 
+*/
+
+
+html{
+    font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+#main {
+    overflow: hidden;
+}
+#nav{
+    display: inline-block;
+}
+/* common */
+.text-center {
+    text-align: center;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-16{
+    margin-top: 16px !important;
+}
+.mt-32{
+    margin-top: 32px !important;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-2{
+    width: 50%;
+}
+.col-1{
+    width: 100%;
+}
+/* common */
+#header{
+    height: 46px;
+    background-color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1;
+    
+}
+
+#nav > li {
+    display: inline-block;
+}
+#nav .subnav{
+    position: absolute;
+    list-style: none;
+}
+
+#nav li{
+    position: relative;
+}
+#nav > li > a{
+    color: white;
+    text-transform: uppercase;
+}
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px 0 24px;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav li:hover a,
+#nav > li:hover > a{
+    color: #000;
+    background-color: #ccc;
+    display: block;
+    
+}
+#nav .subnav{
+    top: 100%;
+    min-width: 160px;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#nav .subnav a{
+    color: black;
+    padding: 0 16px;
+    
+}
+#header .search-btn,
+#header .menu-mobile-btn
+{
+    float: right;
+    color: white;
+    line-height: 46px;
+    padding: 0 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#header .search-btn:hover
+{
+    background-color: red;
+}
+#header .menu-mobile-btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+
+#slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/chicago.jpg') top center / cover no-repeat;
+    color: #fff;
+}
+#slider .text-content{
+    position: absolute;
+    text-align: center;
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+}
+#slider .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+#content .content-section{
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#content .section-heading{
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 3px;
+    
+}
+#content .sub-heading{
+    font-size: 15px;
+    margin-top: 25px;
+    opacity: 0.6;
+}
+
+#content .about-text{
+    margin-top: 25px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+#content .member-list{
+    margin-top: 48px;
+    overflow: hidden;
+}
+#content .member-item{
+    float: left;
+    width: calc(100% / 3);
+   
+}
+#content .member-img{
+    width: 154px;
+    margin-top: 15px;
+    border-radius: 4px;
+    
+}
+
+/* tour-section */
+.tuor-section{
+    margin-top: 100px;
+    background-color: #000;
+    width: 100%;
+}
+.ticket-list{
+    background-color: #fff;
+    margin-top: 40px;
+}
+.ticket-list li{
+    padding: 11px 16px;
+    font-size: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.ticket-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+.ticket-list .quantity{
+    float: right;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    margin-top: -2px;
+}
+
+/* place */
+.place-list {
+    margin: 32px -8px;
+}
+.place-item {
+    float: left;
+    width: 33.33333%;
+    padding: 0px 8px 0px 8px;
+
+}
+.place-img {
+    width: 100%;
+    display: block;
+}
+.place-img:hover{
+    opacity: 0.6;
+}
+.place-body{
+    font-size: 15px;
+    background-color: #fff;
+    padding: 16px;
+}
+
+.place-heading, .place-time,.place-desc{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+.place-time{
+    opacity: 0.6;
+}
+.place-buy-btn{
+    background-color: #000;
+    padding: 8px 16px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 16px;
+}
+.place-buy-btn:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+@media(max-width:768px){
+    .tablet{
+        width: 235px;
+        height: 176px;
+    }
+}
+@media(min-width:769px){
+    .pc{
+        width: 245px;
+        height: 184px;
+    }
+}
+
+
+/*contact form */
+.contact-content{
+    margin-top: 48px;
+}
+.contact-info{
+    font-size: 18px;
+    line-height: 1.4;
+}
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+}
+.btn-send{
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    float: right;
+    
+}
+.btn-send:hover{
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+.map-section .img{
+    width: 100%;
+}
+#footer{
+    padding: 64px 16px;
+}
+#footer a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+}
+#footer a:hover{
+    opacity: 0.6;
+}
+#footer p{
+    margin: 15px;
+}
